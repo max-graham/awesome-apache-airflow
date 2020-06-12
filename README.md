@@ -12,6 +12,7 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [Libraries, Hooks, Utilities](#libraries-hooks-utilities)
 - [Meetups](#meetups)
 - [Commercial Airflow-as-a-service providers](#commercial-airflow-as-a-service-providers)
+- [Cloud Composer resources](#cloud-composer-resources)
 - [Non-English resources](#non-english-resources)
 
 ## Vital links
@@ -40,6 +41,7 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [Bitnami Airflow Scheduler Docker image](https://github.com/bitnami/bitnami-docker-airflow-scheduler) - A secure and up-to-date docker image for Airflow Scheduler maintained by Bitnami.
 - [Bitnami Airflow Worker Docker image](https://github.com/bitnami/bitnami-docker-airflow-worker) - A secure and up-to-date docker image for Airflow Worker maintained by Bitnami. A CeleryExecutor docker-compose deployment is available [here](https://github.com/bitnami/bitnami-docker-airflow-worker/blob/master/docker-compose.yml).
 - [Distribute & deploy Apache Airflow via Python PEX files](https://github.com/msumit/airflow-pex) - Example repo with steps to bundle, distribute, & deploy Apache Airflow as PEX files.
+- [Introducing KEDA for Airflow](https://www.astronomer.io/blog/the-keda-autoscaler/) - How to use KEDA scaler system to enable autoscaling of celery workers based on data stored in the Airflow metadata database. 
 
 ## Introductions and tutorials
 - [Automate AWS Tasks Thanks to Airflow Hooks](https://blog.sicara.com/automate-aws-tasks-boto3-airflow-hooks-593c3120e8fc) - A step by step tutorial to understand how to connect your Airflow pipeline to S3.
@@ -55,8 +57,11 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [Integrating Apache Airflow with Databricks](https://databricks.com/blog/2017/07/19/integrating-apache-airflow-with-databricks.html) - While this tutorial is focused specifically on Databricks' Spark solutions, it does have a reasonable overview of Airflow basics and demonstrates how a third party solution can quickly integrate into Airflow.
 - [Apache Airflow: Tutorial and Beginners Guide](https://www.polidea.com/blog/apache-airflow-tutorial-and-beginners-guide/) - This article discusses the basic concepts that stand behind Airflow and discusses the problems it solves.
 - [Testing and debugging Apache Airflow](https://blog.godatadriven.com/testing-and-debugging-apache-airflow) - Article explaining how to apply unit testing, mocking and debugging to Airflow code.
+- [Get started developing workflows with Apache Airflow](http://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/) - This brief introductory tutorial covers how to create data pipeline and processing workflow using DAG, operators, Sensor, using Xcoms to communicate between operators.
+- [Get started with Airflow + Google Cloud Platform + Docker](https://medium.com/@junjiejiang94/get-started-with-airflow-google-cloud-platform-docker-a21c46e0f797) - Step-by-step introduction by [Jayce Jiang](https://medium.com/@junjiejiang94).
 
 ## Best practices, lessons learned and cool use cases
+- [Testing in Airflow Part 2](https://medium.com/@chandukavar/testing-in-airflow-part-2-integration-tests-and-end-to-end-pipeline-tests-af0555cd1a82) - [Chandu Kavar](https://twitter.com/chandukavar) and [Sarang Shinde](https://www.linkedin.com/in/sarang-shinde-219a4873/) have explained Integration Tests and End-to-End Pipeline Tests.
 - [Upgrading & Scaling Airflow at Robinhood](https://robinhood.engineering/upgrading-scaling-airflow-at-robinhood-5b625dfaa2ee) - [Abishek Ray](https://www.linkedin.com/in/abhishek-ray-29210145/) describes how Robinhood tackled upgrading its production Airflow while minimizing downtime.
 - [We're all using Airflow wrong and how to fix it](https://medium.com/bluecore-engineering/were-all-using-airflow-wrong-and-how-to-fix-it-a56f14cb0753) - [Jessica Laughlin](https://www.jldlaughlin.com/) of [Bluecore](https://www.bluecore.com/) shares three engineering problems associated with the Airflow design and how to solve them by using the [KubernetesPodOperator](https://github.com/apache/airflow/blob/v1-10-stable/airflow/contrib/operators/kubernetes_pod_operator.py) in two design patterns.
 - [Getting started with Data Lineage](https://medium.com/dailymotion/getting-started-with-data-lineage-6307b2b429b3) - [Germain Tanguy](https://www.linkedin.com/in/germain-tanguy/) of [Dailymotion](https://www.dailymotion.com/) shares a data lineage prototype integrated to Apache Airflow.
@@ -89,6 +94,11 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [Deploying Apache Airflow in Azure to build and run data pipelines](https://azure.microsoft.com/sv-se/blog/deploying-apache-airflow-in-azure-to-build-and-run-data-pipelines/) - It talks about running Airflow on Azure.
 - [The Zen of Python and Apache Airflow](https://blog.godatadriven.com/zen-of-python-and-apache-airflow) - Blog post about how the Zen of Python can be applied to Airflow code.
 - [Securing Apache Airflow UI WITH DAG Level Access](https://eng.lyft.com/securing-apache-airflow-ui-with-dag-level-access-a7bc649a2821) - Blog post about Airflow DAG level access and how Lyft uses it.
+- [Upgrading Airflow with Zero Downtime](https://medium.com/flatiron-engineering/upgrading-airflow-with-zero-downtime-8df303760c96) - A detailed article on how to deploy Airflow with zero downtime.
+- [Building a Production-Level ETL Pipeline Platform Using Apache Airflow](https://towardsdatascience.com/building-a-production-level-etl-pipeline-platform-using-apache-airflow-a4cf34203fbd) - This post describes how the system management team at Cerner uses Airflow.
+- [Bare minimal Airflow on Kubernetes (Local, EKS, AKS)](https://github.com/stwind/airflow-on-kubernetes) - An article on deploying Airflow on local Kubernetes, AWS EKS and Azure AKS with bare minimal setup.
+- [Breaking up the Airflow DAG monorepo](https://tech.scribd.com/blog/2020/breaking-up-the-dag-repo.html) - This post describes how to support managing Airflow DAGs from multiple git repos through S3.
+- [Improving Performance of Apache Airflow Scheduler](https://medium.com/databand-ai/improving-performance-of-apache-airflow-scheduler-507f4cb6462a) - A story of an adventure that allowed [Databind](https://databand.ai/) to speed up DAG parsing time 10 times
 
 ## Books, blogs, podcasts, and such
 - [Data Pipelines with Apache Airflow](https://www.manning.com/books/data-pipelines-with-apache-airflow) - A Manning book (Early Access September 2019) on Airflow.
@@ -114,7 +124,8 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [It's a Breeze to develop Airflow - Cloud Native Warsaw](https://www.youtube.com/watch?v=18pEeeyjInU) - Introducing Breeze development environment by [Jarek Potiuk](https://github.com/potiuk) from September 2019, [Cloud Native Warsaw conferencei](http://cloudnativewarsaw.com/).
 - [Migrating Apache Oozie Workflows to Apache Airflow](https://www.youtube.com/watch?v=8L1F-6t_6Ao.) - Talk from [Szymon Przedwojski](https://github.com/sprzedwojski) from Airflow Bay Area Meetup June 2018 about Oozie-to-Airflow migration tool.
 - [Building data lakes with Apache Airflow](https://www.youtube.com/watch?v=MM8tfTrcnfk) - Talk by [Bas Harenslak](https://github.com/BasPH) and [Julian de Ruiter](https://github.com/jrderuiter) at the Amsterdam Apache Airflow September 2018 meetup about building data lakes with Apache Airflow as the spider in the web managing all data flows.
-- [First Warsaw Apache Airflow Meetup](https://youtu.be/Nr4Pp1SNXeU) - Live streamed recording from the first Apache Airflow Meetup in Warsaw in October 2019
+- [First Warsaw Apache Airflow Meetup](https://youtu.be/Nr4Pp1SNXeU) - Live streamed recording from the first Apache Airflow Meetup in Warsaw in October 2019.
+- [What's coming in Apache Airflow 2.0](https://youtu.be/znowFIBK1lk) - joint talk by [Ash Berlin-Taylor](https://github.com/ashb), [Kaxil Naik](https://github.com/kaxil), [Jarek Potiuk](https://github.com/potiuk), [Kamil Breguła](https://github.com/mik-laj), [Daniel Imbermann](https://github.com/dimberman), and [Tomek Urbaszek](https://github.com/turbaszek) at the [Online NYC Meetup, 13th of May 2020](https://www.meetup.com/NYC-Apache-Airflow-Meetup/events/270483933/)
 
 ## Libraries, Hooks, Utilities
 - [Airflow plugins](https://github.com/airflow-plugins/) - Central collection of repositories of various plugins for Airflow, including mailchimp, trello, sftp, GitHub, etc.
@@ -126,6 +137,12 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [whirl](https://github.com/godatadriven/whirl) - Fast iterative local development and testing of Apache Airflow workflows.
 - [airflow-code-editor](https://github.com/andreax79/airflow-code-editor) - A plugin for Apache Airflow that allows you to edit DAGs in browser.
 - [Pylint-Airflow](https://github.com/BasPH/pylint-airflow) - A Pylint plugin for static code analysis on Airflow code.
+- [afctl](https://github.com/qubole/afctl) - A CLI tool that includes everything required to create, manage and deploy airflow projects faster and smoother.
+- [Dag Dependencies viewer](https://github.com/ms32035/airflow-dag-dependencies) - A plugin which creates a view to visualize dependencies between the Airflow DAGs
+- [Airflow ECR Plugin](https://github.com/asandeep/airflow-ecr-plugin) - Plugin to refresh AWS ECR login token at regular intervals. This is helpful where DockerOperator needs to pull images hosted on ECR.
+- [AirflowK8sDebugger](https://github.com/Javier162380/AirflowKuberentesDebugger) - A library for generate k8s pod yaml templates from an Airflow dag using the KubernetesPodOperator.
+- [Oozie to Airflow](https://github.com/GoogleCloudPlatform/oozie-to-airflow) - A tool to easily convert between [Apache Oozie](http://oozie.apache.org/) workflows and Apache Airflow workflows.
+
 
 ## Meetups
 - [Amsterdam Apache Airflow Meetup](https://www.meetup.com/Amsterdam-Airflow-meetup)
@@ -145,6 +162,14 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 - [Google Cloud Composer](https://cloud.google.com/composer/) - Google Cloud Composer is a managed service built atop Google Cloud and Airflow.
 - [Qubole](http://docs.qubole.com/en/latest/user-guide/airflow/) - Qubole is mainly known as a service-and-support company for Apache Hive, but also provides Airflow as a component of its platform.
 - [Astronomer.io](https://www.astronomer.io/) - Astronomer provides complete ETL lifecycle solutions and appears to be entirely focused on providing Airflow-based products.
+
+## Cloud Composer resources
+
+This section contains articles that apply to [Cloud Composer](https://cloud.google.com/composer) - a service built by Google Cloud based on Apache Airflow. Tricks and solutions are described here that are intended for Cloud Composer, but may be applicable to vanilla Airflow.
+
+- [Enabling Autoscaling in Google Cloud Composer](https://medium.com/traveloka-engineering/enabling-autoscaling-in-google-cloud-composer-ac84d3ddd60) - Supercharge your Cloud Composer deployment while saving up some cost during idle periods.
+- [Scale your Composer environment together with your business](https://cloud.google.com/blog/products/data-analytics/scale-your-composer-environment-together-your-business) - The Celery Executor architecture and ways to ensure high scheduler performance.
+- [pianka.sh](https://gist.github.com/mik-laj/fd2bbae8e06050cef15ea88d5b6c9b28) - Missing command in the cloud application. This tool facilitates some administrative tasks.
 
 ## Non-English resources
 - [Airflow Documentation-Chinese](https://airflow.apachecn.org) - (🇨🇳Chinese) [Apachecn](https://github.com/apachecn) has translated the Airflow official documentation.
